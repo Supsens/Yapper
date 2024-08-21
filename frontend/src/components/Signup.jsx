@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { toast } from "sonner"
 import axios from 'axios';
+import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 export const Signup = () => {
     const [input, setInput] = useState({
