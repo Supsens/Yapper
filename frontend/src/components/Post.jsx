@@ -34,7 +34,7 @@ const Post = ({ post }) => {
   const likedislikehandler = async () => {
     try {
         const action = like ? "dislike" : "like";
-        const res = await axios.post(`http://localhost:8000/api/v1/post/${post?._id}/${action}`,{}, { withCredentials: true });
+        const res = await axios.post(`https://yapper-8ny9.onrender.com/api/v1/post/${post?._id}/${action}`,{}, { withCredentials: true });
         if (res.data.success) {
             const updatedLikes = like ? postlike - 1 : postlike + 1;
             setpostlike(updatedLikes);
@@ -54,7 +54,7 @@ const Post = ({ post }) => {
 };
 const Bookmarkhandler = async () => {
   try {
-      const res = await axios.get(`http://localhost:8000/api/v1/post/${post?._id}/bookmark`, {
+      const res = await axios.get(`https://yapper-8ny9.onrender.com/api/v1/post/${post?._id}/bookmark`, {
         withCredentials: true });
       if (res.data.success) {
           toast.success(res.data.message);
@@ -67,7 +67,7 @@ const Bookmarkhandler = async () => {
 
 const commenthandler = async () => {
   try {
-      const res = await axios.post(`http://localhost:8000/api/v1/post/${post?._id}/comment`, {text}, {
+      const res = await axios.post(`https://yapper-8ny9.onrender.com/api/v1/post/${post?._id}/comment`, {text}, {
         headers:{
           'Content-Type':'application/json'
         },
@@ -91,7 +91,7 @@ const commenthandler = async () => {
   
   const deletehandler=async()=>{
     try {
-      const res=await axios.delete(`http://localhost:8000/api/v1/post/delete/${post?._id}`,{withCredentials:true})
+      const res=await axios.delete(`https://yapper-8ny9.onrender.com/api/v1/post/delete/${post?._id}`,{withCredentials:true})
       if(res.data.success)
       {
 

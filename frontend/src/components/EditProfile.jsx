@@ -51,7 +51,7 @@ const EditProfile = () => {
     try {
 
       setLoading(true);
-      const res=await axios.post('http://localhost:8000/api/v1/user/profile/edit',formData,{
+      const res=await axios.post('https://yapper-8ny9.onrender.com/api/v1/user/profile/edit',formData,{
         Headers:{
             'Content-Type':'multipart/form-data'
         },

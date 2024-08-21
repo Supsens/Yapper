@@ -25,7 +25,7 @@ const CommnetDialog = ({ open, setopen, post }) => {
   const SendMessageHandler = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:8000/api/v1/post/${post?._id}/comment`,
+        `https://yapper-8ny9.onrender.com/api/v1/post/${post?._id}/comment`,
         { text },
         {
           headers: {

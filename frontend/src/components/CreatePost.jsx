@@ -51,7 +51,7 @@ const CreatePost = ({ open, setopen }) => {
     try {
       setloading(true);
       const res = await axios.post(
-        "http://localhost:8000/api/v1/post/add",
+        "https://yapper-8ny9.onrender.com/api/v1/post/add",
         formData,
         {
           headers: {
